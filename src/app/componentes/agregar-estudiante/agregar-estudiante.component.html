@@ -1,0 +1,52 @@
+<div class="card">
+    <div class="card-header">
+        Agregar Estudiante
+    </div>
+    <div class="card-body">
+        <form [formGroup]="formulariodestudiante" (ngSubmit)="enviarDatos()">
+
+
+            <div class="mb-3">
+              <label for="" class="form-label">Matricula.</label>
+              <input type="number"
+                class="form-control" name="" formControlName="matricula" id="" aria-describedby="helpId" placeholder="matricula">
+            </div>
+
+            <div class="mb-3">
+              <label for="" class="form-label">Nombre.</label>
+              <input type="text"
+                class="form-control" name="" formControlName = "nombre" aria-describedby="helpId" placeholder="Nombre">
+            </div>
+
+            <div class="mb-3">
+              <label for="" class="form-label">Fecha de Solicitud de Falta.</label>
+              <input type="date"
+                class="form-control" name="" formControlName = "fecha" id="" aria-describedby="helpId" placeholder="Fecha">
+            </div>
+
+            <div class="mb-3">
+              <label for="" class="form-label">Motivo de la no conexion</label>
+              <input type="text"
+                class="form-control" name="" formControlName = "motivo" id="" aria-describedby="helpId" placeholder="Motivo">
+            </div>
+
+            <div class="mb-3">
+              <label for="" class="form-label">Valido</label>
+              <input type="text"
+                class="form-control" name="" formControlName = "valido" id="" aria-describedby="helpId" placeholder="Validar">
+            </div>
+
+            <div class="mb-3">
+              <label for="" class="form-label">Comentario</label>
+              <input type="text"
+                class="form-control" name="" formControlName = "comentario" id="" aria-describedby="helpId" placeholder="Comentario">
+            </div>
+
+            <div class="btn-group" role="group" aria-label="">
+                <button type="submit" class="btn btn-success">Agregar</button>
+                <button type="button" class="btn btn-primary">Cancelar</button>
+            </div>
+
+        </form>
+    </div>
+</div>

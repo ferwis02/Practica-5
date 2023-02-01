@@ -1,0 +1,38 @@
+<div class="card">
+    <div class="card-header">
+        Estudiantes
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">Lista de Estudiante</h4>
+    </div>
+    <div class="card-footer text-muted">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre: </th>
+                    <th>Fecha: </th>
+                    <th>Motivo de la no conexion: </th>
+                    <th>Valido: </th>
+                    <th>Comentario: </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let estudiante of Estudiantes; let iControl=index">
+                    <td>{{estudiante.id}}</td>
+                    <td>{{estudiante.matricula}}</td>
+                    <td>{{estudiante.nombre}}</td>
+                    <td>{{estudiante.fecha}}</td>
+                    <td>{{estudiante.motivo}}</td>
+                    <td>{{estudiante.valido}}</td>
+                    <td>{{estudiante.comentario}}</td>
+                    <td>
+                       <a class="btn btn-success" routerLink="/editar-estudiante/1"> Editar </a> | 
+                       <a class="btn btn-danger" (click) = "borrarRegistro(estudiante.id, iControl)" role="button">borrar</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </div>
+</div>
